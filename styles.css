@@ -206,3 +206,13 @@ th:nth-child(4), td:nth-child(4) {
 tr:hover {
     background: rgb(200, 199, 199);
 }
+
+.editBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Ajuste da largura da nova coluna "Editar" */
+th:nth-child(5),
+td:nth-child(5) {
+    width: 15%;
+}
