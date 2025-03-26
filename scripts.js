@@ -288,3 +288,27 @@ const updateItem = (nomeAntigo) => {
       console.error('Erro ao atualizar contato:', error);
     });
 };
+
+const apiKey = "79f2870e4528540bb5f5079faa56e91f";
+const cidades = ["Brasilia,BR", "São Paulo,BR", "Rio de Janeiro,BR", "Salvador,BR", "Belo Horizonte,BR", "Fortaleza,BR", "Manaus,BR", "Curitiba,BR", "Recife,BR", "Porto Alegre,BR"];
+const weatherDiv = document.getElementById('weather-info');
+let cidadeIndex = 0;
+
+function buscarClima() {
+    const cidade = cidades[cidadeIndex];
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&lang=pt_br&units=metric`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            weatherDiv.innerHTML = `🌤️ ${cidade}: ${data.weather[0].description} | 🌡️ ${data.main.temp}°C | 💧 Umidade: ${data.main.humidity}%`;
+            cidadeIndex = (cidadeIndex + 1) % cidades.length;
+        })
+        .catch(error => {
+            console.error("Erro ao buscar dados do clima:", error);
+            weatherDiv.innerHTML = "Não foi possível carregar o clima.";
+        });
+}
+
+setInterval(buscarClima, 5000);  // Alterna a cada 5 segundos
+buscarClima();  // Chamada inicial
