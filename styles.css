@@ -216,3 +216,19 @@ th:nth-child(5),
 td:nth-child(5) {
     width: 15%;
 }
+
+.weather {
+    background-color: #0f8e59;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.weather span {
+    margin: 0 10px;
+}
+
+
