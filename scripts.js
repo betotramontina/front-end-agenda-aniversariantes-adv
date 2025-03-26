@@ -217,6 +217,12 @@ const insertList = (nameContact, cell, formattedBirthdate) => {
   // Cria o botão de remover
   insertButton(row.insertCell(-1));
 
+  // Cria o botão de editar
+  let editBtn = document.createElement("button");
+  editBtn.textContent = "Editar";
+  editBtn.onclick = () => updateItem(nameContact);
+  row.insertCell(-1).appendChild(editBtn);
+
   // Limpa os campos após inserção
   document.getElementById("newInput").value = "";
   document.getElementById("newCell").value = "";
@@ -224,4 +230,61 @@ const insertList = (nameContact, cell, formattedBirthdate) => {
 
   // Aplica a função de remoção
   removeElement();
-}
+};
+
+/*
+  --------------------------------------------------------------------------------------
+  Função para atualizar um contato da lista do servidor via requisição PUT
+  --------------------------------------------------------------------------------------
+*/
+const updateItem = (nomeAntigo) => {
+  // Seleciona a linha correspondente ao contato
+  const tabela = document.getElementById("myTable");
+  const linhas = tabela.getElementsByTagName("tr");
+
+  let celularAntigo = "";
+  let dataNascimentoAntiga = "";
+
+  for (let i = 1; i < linhas.length; i++) { // Começa do índice 1 para ignorar o cabeçalho
+    const celulas = linhas[i].getElementsByTagName("td");
+
+    if (celulas[0].textContent.trim() === nomeAntigo) {
+      celularAntigo = celulas[1].textContent;
+      const [dia, mes, ano] = celulas[2].textContent.split("-");
+      dataNascimentoAntiga = `${ano}-${mes}-${dia}`; // Formato ISO para edição
+      break;
+    }
+  }
+
+  let novoNome = prompt("Digite o novo nome do contato:", nomeAntigo);
+  let novoCelular = prompt("Digite o novo número de celular:", celularAntigo);
+  let novaDataNascimento = prompt("Digite a nova data de nascimento (AAAA-MM-DD):", dataNascimentoAntiga);
+
+  if (!novoNome || !novoCelular || !novaDataNascimento) {
+    alert("Todos os campos devem ser preenchidos!");
+    return;
+  }
+
+  let url = 'http://127.0.0.1:5000/contato?nome=' + encodeURIComponent(nomeAntigo);
+
+  const formData = new FormData();
+  formData.append('nome', novoNome);
+  formData.append('celular', novoCelular);
+  formData.append('data_nascimento', novaDataNascimento);
+
+  fetch(url, {
+    method: 'put',
+    body: formData
+  })
+    .then(response => {
+      if (response.ok) {
+        alert("Contato atualizado com sucesso!");
+        location.reload();  // Recarrega a página para atualizar a lista
+      } else {
+        alert("Erro ao atualizar contato.");
+      }
+    })
+    .catch(error => {
+      console.error('Erro ao atualizar contato:', error);
+    });
+};
