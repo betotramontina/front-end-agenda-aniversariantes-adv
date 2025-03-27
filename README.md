@@ -14,10 +14,10 @@
 #### Rota: GET `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&lang=pt_br&units=metric`
 #### Parâmetros: q = nome da cidade; appid = chave de API; units = define as unidades de medida; lang = define o idioma da resposta (pt_br)
 
-# Instruções de uso - Modo Desenvolvimento
+# Como executar - Modo Desenvolvimento
 #### Executar as instruções de uso e instalação do back-end
 #### Fazer o download dos docs constantes no seguinte repositório: https://github.com/betotramontina/front-end-agenda-aniversariantes-adv.git 
 #### Clicar e abrir o doc index.html no seu navegador de preferência
 #### Interagir com a single page application da Agenda Aniversariantes
 
-# Instruções de uso - Via Docker
+# Como executar - Via Docker
