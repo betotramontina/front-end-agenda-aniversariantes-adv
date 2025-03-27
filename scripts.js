@@ -234,7 +234,7 @@ const insertList = (nameContact, cell, formattedBirthdate) => {
 
 /*
   --------------------------------------------------------------------------------------
-  Função para atualizar um contato da lista do servidor via requisição PUT
+  Função para atualizar um contato da lista de aniversariantes
   --------------------------------------------------------------------------------------
 */
 const updateItem = (nomeAntigo) => {
@@ -289,6 +289,11 @@ const updateItem = (nomeAntigo) => {
     });
 };
 
+/*
+  --------------------------------------------------------------------------------------
+  API OpenWeatherMap para exibir informações meteorológicas no cabeçalho do site
+  --------------------------------------------------------------------------------------
+*/
 const apiKey = "79f2870e4528540bb5f5079faa56e91f";
 const cidades = ["Brasilia,BR", "São Paulo,BR", "Rio de Janeiro,BR", "Salvador,BR", "Belo Horizonte,BR", "Fortaleza,BR", "Manaus,BR", "Curitiba,BR", "Recife,BR", "Porto Alegre,BR"];
 const weatherDiv = document.getElementById('weather-info');
