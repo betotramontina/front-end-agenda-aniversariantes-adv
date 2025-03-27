@@ -21,9 +21,6 @@
 #### Interagir com a single page application da Agenda Aniversariantes
 
 # Como executar - Via Docker
-#### Abrir o terminal na raiz do seu projeto, onde o Dockerfile está localizado, e executar o seguinte comando como administrador: 
-#### docker build -t meu-site .
-#### Em seguida, executar o seguinte comando: 
-#### docker run -p 8080:80 meu-site
-#### Para acessar o site, abrir o navegador e acessar: 
-#### http://localhost:8080
+#### Abrir o terminal na raiz do seu projeto, onde o Dockerfile está localizado, e executar o seguinte comando como administrador: docker build -t meu-site .
+#### Em seguida, executar o seguinte comando como adm: docker run -p 8080:80 meu-site
+#### Para acessar o site, abrir o navegador e acessar: http://localhost:8080
