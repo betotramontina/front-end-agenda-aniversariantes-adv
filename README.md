@@ -8,6 +8,7 @@
 ### Com a Agenda Aniversariantes você tem uma forma segura e não invasiva de guardar essas datas e contatos especiais, sem a obrigação de se cadastrar em qualquer site.  
 
 <img src="G:\Meu Drive\Pos-Full-Stack/Imagem2.png" alt="Descrição da imagem" width="300">
+![Imagem2](https://github.com/user-attachments/assets/19461b64-d7bb-4d9d-923f-4f4f24595672)
 
 
 # API externa: OpenWeatherMap
