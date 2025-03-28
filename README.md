@@ -7,6 +7,9 @@
 ### Essa é uma alternativa para você, que assim como eu, não tem Facebook, Instagram ou qualquer outra mídia social e por isso perdeu a sua agenda de aniversários. 
 ### Com a Agenda Aniversariantes você tem uma forma segura e não invasiva de guardar essas datas e contatos especiais, sem a obrigação de se cadastrar em qualquer site.  
 
+<img src="G:\Meu Drive\Pos-Full-Stack/Imagem2.png" alt="Descrição da imagem" width="300">
+
+
 # API externa: OpenWeatherMap
 ## A aplicação utiliza a API OpenWeatherMap para exibir informações meteorológicas no cabeçalho do site.
 #### Licença de uso: não aplicável
