@@ -8,9 +8,7 @@
 ### Com a Agenda Aniversariantes você tem uma forma segura e não invasiva de guardar essas datas e contatos especiais, sem a obrigação de se cadastrar em qualquer site.  
 
 # Arquitetura da Aplicação
-### API Externa <---> Interface (Front-end) <--REST--> API (Back-end) <---> Banco de Dados
-### Fluxograma ilustrativo disponível no link abaixo:
-![Imagem2](https://github.com/user-attachments/assets/19461b64-d7bb-4d9d-923f-4f4f24595672)
+![Arquitetura da Aplicação](https://github.com/user-attachments/assets/7bd27eac-5c9b-4c6c-b30c-6ca6a9d0557e)
 
 
 # API externa: OpenWeatherMap
