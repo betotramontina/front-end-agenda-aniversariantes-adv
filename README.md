@@ -10,7 +10,6 @@
 # Arquitetura da Aplicação
 ![Arquitetura da Aplicação](https://github.com/user-attachments/assets/7bd27eac-5c9b-4c6c-b30c-6ca6a9d0557e)
 
-
 # API externa: OpenWeatherMap
 ## A aplicação utiliza a API OpenWeatherMap para exibir informações meteorológicas no cabeçalho do site.
 #### Licença de uso: não aplicável
