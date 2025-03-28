@@ -7,7 +7,9 @@
 ### Essa é uma alternativa para você, que assim como eu, não tem Facebook, Instagram ou qualquer outra mídia social e por isso perdeu a sua agenda de aniversários. 
 ### Com a Agenda Aniversariantes você tem uma forma segura e não invasiva de guardar essas datas e contatos especiais, sem a obrigação de se cadastrar em qualquer site.  
 
-<img src="G:\Meu Drive\Pos-Full-Stack/Imagem2.png" alt="Descrição da imagem" width="300">
+# Arquitetura da Aplicação
+### API Externa <---> Interface (Front-end) <--REST--> API (Back-end) <---> Banco de Dados
+### Fluxograma ilustrativo disponível no link abaixo:
 ![Imagem2](https://github.com/user-attachments/assets/19461b64-d7bb-4d9d-923f-4f4f24595672)
 
 
